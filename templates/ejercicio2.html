@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Conteo de Caracteres en Nombres</title>
+</head>
+<body>
+    <div class="container2">
+        <form action="/ejercicio2" method="POST">
+            <div class="form-group2">
+                <label for="nombre1">Nombre 1:</label>
+                <input type="text" name="nombre1" id="nombre1"><br>
+            </div>
+            <div class="form-group2">
+                <label for="nombre2">Nombre 2:</label>
+                <input type="text" name="nombre2" id="nombre2"><br>
+            </div>
+            <div class="form-group2">
+                <label for="nombre3">Nombre 3:</label>
+                <input type="text" name="nombre3" id="nombre3"><br>
+            </div>
+            <div class="form-group2">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+        {% if nombre_mas_largo and resultado %}
+        <div>
+            <p>El nombre con mayor cantidad de caracteres es: {{ nombre_mas_largo }}</p>
+            <p>El nombre tiene {{ resultado }} caracteres</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
